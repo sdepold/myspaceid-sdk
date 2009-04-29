@@ -26,7 +26,7 @@ module MySpace
       @method = method
       @options = options.dup
       @options.delete(:v1_json)
-      @v1_json = options.detect(:v1_json)
+      @v1_json = options.include? :v1_json
     end
 
     def self.parse_path(path)

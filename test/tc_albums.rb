@@ -25,7 +25,9 @@ class TC_Albums < Test::Unit::TestCase
       assert_equal('40418', album_id)
       title = album['title']
       assert_instance_of(String, title)
-      assert_equal('My Photos', title)
+      
+      # is different for every language
+      assert(["My Photos", "Meine Fotos"].include? title)
     end
   end
 
